@@ -142,13 +142,13 @@ module "firewalls" {
 # VPC Peering Module
 module "vpc-peering" {
   source                        = "./Networking/vpc-peering"
-  rcjy_business_vpc_to_hybrid = "rcjy-business-vpc"
-  hybrid_vpc = "rcjy-hybrid-connectivity-vpc"
-  rcjy-business-vpc = "rcjy-business-vpc"
-  rcjy-health-vpc = "rcjy-health-vpc"
-  rcjy-education-vpc = "rcjy-education-vpc"
-  rcjy-trusted-hub-vpc = "rcjy-trusted-hub-vpc"
-  rcjy-managment-vpc = "rcjy-managment-vpc"
+  rcjy_business_vpc_to_hybrid   = "rcjy-business-vpc"
+  hybrid_vpc                    = "rcjy-hybrid-connectivity-vpc"
+  rcjy-business-vpc             = "rcjy-business-vpc"
+  rcjy-health-vpc               = "rcjy-health-vpc"
+  rcjy-education-vpc            = "rcjy-education-vpc"
+  rcjy-trusted-hub-vpc          = "rcjy-trusted-hub-vpc"
+  rcjy-managment-vpc            = "rcjy-managment-vpc"
 }
 
 #===============================================================================================================================
