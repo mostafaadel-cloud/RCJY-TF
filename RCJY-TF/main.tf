@@ -134,6 +134,13 @@ module "Shared_VPC" {
 module "firewalls" {
   source          = "./Networking/firewalls"
   network_project = module.Org_Hierarcy.network_project
+  hybrid-vpc                    = "rcjy-hybrid-connectivity-vpc"
+  rcjy-business-vpc             = "rcjy-business-vpc"
+  rcjy-health-vpc               = "rcjy-health-vpc"
+  rcjy-education-vpc            = "rcjy-education-vpc"
+  rcjy-trusted-hub-vpc          = "rcjy-trusted-hub-vpc"
+  rcjy-managment-vpc            = "rcjy-managment-vpc"
+  rcjy-untrusted-hub-vpc        = "rcjy-untrusted-hub-vpc"
 }
 
 #===============================================================================================================================
@@ -142,8 +149,7 @@ module "firewalls" {
 # VPC Peering Module
 module "vpc-peering" {
   source                        = "./Networking/vpc-peering"
-  rcjy_business_vpc_to_hybrid   = "rcjy-business-vpc"
-  hybrid_vpc                    = "rcjy-hybrid-connectivity-vpc"
+  hybrid-vpc                    = "rcjy-hybrid-connectivity-vpc"
   rcjy-business-vpc             = "rcjy-business-vpc"
   rcjy-health-vpc               = "rcjy-health-vpc"
   rcjy-education-vpc            = "rcjy-education-vpc"
