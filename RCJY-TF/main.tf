@@ -141,13 +141,14 @@ module "firewalls" {
 
 # VPC Peering Module
 module "vpc-peering" {
-  source                        = "./modules/network/peering"
-  # v1spc_vpc_prd_01_vpc_self_link = module.vpc.v1spc_vpc_prd_01_vpc_self_link
-  ddan_vpc_prd_01_vpc_self_link     = module.vpc.ddan_vpc_prd_01_vpc_self_link
-  dsm_vpc_prd_01_vpc_self_link     = module.vpc.dsm_vpc_prd_01_vpc_self_link
-  sporact_vpc_prd_01_self_link    = module.vpc.sporact_vpc_prd_01_self_link
-  apex_vpc_prd_01_vpc_self_link      = module.vpc.apex_vpc_prd_01_vpc_self_link
-  depends_on = [ module.subnet ]
+  source                        = "./Networking/vpc-peering"
+  rcjy_business_vpc_to_hybrid = "rcjy-business-vpc"
+  hybrid_vpc = "rcjy-hybrid-connectivity-vpc"
+  rcjy-business-vpc = "rcjy-business-vpc"
+  rcjy-health-vpc = "rcjy-health-vpc"
+  rcjy-education-vpc = "rcjy-education-vpc"
+  rcjy-trusted-hub-vpc = "rcjy-trusted-hub-vpc"
+  rcjy-managment-vpc = "rcjy-managment-vpc"
 }
 
 #===============================================================================================================================

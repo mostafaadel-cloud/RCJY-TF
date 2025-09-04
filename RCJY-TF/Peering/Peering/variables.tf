@@ -1,25 +1,29 @@
-# variable "peer_network" {
-#   type        = string
-#   default = "tis-prod-me-central2-infra-vn"
-# }
-
-variable "ddan_vpc_prd_01_vpc_self_link" {
+variable "hybrid_vpc" {
   type        = string
   description = ""
 }
 
-variable "dsm_vpc_prd_01_vpc_self_link" {
-  type        = string
+variable "rcjy-business-vpc"{
+  type = string
   description = ""
 }
-
-variable "sporact_vpc_prd_01_self_link" {
-  type        = string
+variable "rcjy-health-vpc"{
+  type = string
   description = ""
 }
-
-variable "apex_vpc_prd_01_vpc_self_link" {
-  type        = string
+variable "rcjy-education-vpc"{
+  type = string
   description = ""
 }
-
+variable "rcjy-trusted-hub-vpc"{
+  type = string
+  description = ""
+}
+variable "rcjy-untrusted-hub-vpc"{
+  type = string
+  description = ""
+}
+variable "rcjy-managment-vpc"{
+  type = string
+  description = ""
+}
